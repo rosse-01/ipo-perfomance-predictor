@@ -1,5 +1,7 @@
-import streamlit as st
+import os
 import requests
+import streamlit as st
+from dotenv import load_dotenv
 
 st.set_page_config(
     page_title="IPO Profitability Predictor",
@@ -39,8 +41,15 @@ if st.button("Analyze Market Profitability", use_container_width=True):
         "Total": total,
         "Offer Price": offer_price
     }
+
+    load_dotenv()
+    API_KEY_SECRET = st.secrets.get("API_KEY_SECRET") or os.getenv("API_KEY_SECRET")
+    if not API_KEY_SECRET:
+    st.error("Missing API Security Key configuration. Please check your .env file or Streamlit Secrets panel.")
+    st.stop()
+    
     headers = {
-        "X-API-KEY": "SuperSecretIPOPredictorKey2026"
+        "X-API-KEY": API_KEY_SECRET
     }
     
     # local Docker container URL gateway
