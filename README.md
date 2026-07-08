@@ -58,13 +58,3 @@ When a user interacts with your deployed application, data traverses through a c
 ```
 
 ---
-
-## 💎 Key Architectural Takeaways for Interviewers
-
-If an interviewer asks you about this project, focus your discussion on these three engineering paradigms:
-
-1. **Decoupled Lifecycles:** Training code is heavy and slow; inference code must be lightweight and rapid. By separating the training phase (Colab) from the live inference endpoint (FastAPI), the application can scale up production instances instantly without dragging the entire machine learning engine with it.
-2. **Stateless Operations:** The FastAPI backend is entirely stateless. It does not track user sessions or keep history. This allows you to scale your AWS Fargate container horizontally (from 1 task to 10 tasks) smoothly under sudden market traffic spikes.
-3. **Defensive API Constraints:** By implementing Pydantic validation schemas, the model is completely protected from crashes caused by bad or empty input fields, making the production container incredibly stable.
-
-Would you like to add an automated performance tracking tool (like Prometheus or simple internal timings) to monitor how fast your backend returns predictions?
