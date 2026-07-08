@@ -25,7 +25,7 @@ To transition this from a localized data science experiment to a resilient, publ
 
 ---
 
-## 🛠️ Tech Stack & Key Tooling
+## Tech Stack & Key Tooling
 
 * **Frontend Dashboard:** Streamlit, Python-Dotenv, Requests
 * **Backend API Engine:** FastAPI, Uvicorn, Pydantic, Joblib
