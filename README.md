@@ -1,4 +1,4 @@
-# AI-Driven IPO Listing Gain Prediction System
+# IPO Listing Gain Prediction System
 
 An end-to-end, production-grade microservice architecture designed to predict day-one IPO listing gains. This system decouples data science workflows into high-performance engineering components by featuring a **Streamlit** frontend dashboard linked via secure REST APIs to a containerized **FastAPI** inference engine deployed on **AWS Fargate (ECS)**.
 
@@ -7,8 +7,6 @@ An end-to-end, production-grade microservice architecture designed to predict da
 ## System Architecture & Workflow
 
 The platform leverages a fully decoupled, client-server microservice topology built for structural isolation and compute optimization:
-
-
 
 1. **Exploratory Data Analysis & Training:** Features engineered, models evaluated, and serialized (`Joblib`) using an optimized Random Forest Classifier pipeline inside Google Colab.
 2. **Frontend UI Client (Streamlit):** Gathers real-time multi-variable investment metrics from users, validates state conditions, and coordinates asynchronous API web requests.
