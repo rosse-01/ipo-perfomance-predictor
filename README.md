@@ -2,6 +2,11 @@
 
 An end-to-end, production-grade microservice architecture designed to predict day-one IPO listing gains. This system decouples data science workflows into high-performance engineering components by featuring a **Streamlit** frontend dashboard linked via secure REST APIs to a containerized **FastAPI** inference engine deployed on **AWS Fargate (ECS)**.
 
+
+https://github.com/user-attachments/assets/7cb7d1dd-68a8-48dd-9413-9bb405da6db0
+
+
+
 ---
 
 ## System Architecture & Workflow
