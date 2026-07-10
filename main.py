@@ -61,7 +61,7 @@ def read_root():
     return {"status": "online"}
 
 @app.post("/predict", summary="Compute day-one listing profitability probability")
-async def predict_ipo(data: IPOFeatures, api_key: str = Security(validate_api_key)):
+def predict_ipo(data: IPOFeatures, api_key: str = Security(validate_api_key)):
     if model is None or scaler is None:
         raise HTTPException(status_code=503, detail="Inference engine inactive: Artifacts missing.")
 
